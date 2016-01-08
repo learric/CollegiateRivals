@@ -1,6 +1,6 @@
 angular.module("ionicstarter")
 
-.controller "SessionController", (SessionFactory, $http) ->
+.controller "SessionController", (SessionFactory) ->
 
   session = this
 
