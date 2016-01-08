@@ -1,0 +1,33 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInRight
+            .page_title
+            .row
+                .col
+                    h3(class='{{ setting.homeTeam.class }}') {{ setting.homeTeam.mascot }}
+                    .reviewImage.animated.infinite.pulse
+                        img(ng-src='img/teams/home/{{ setting.homeTeam.logo }}.png')
+                .col
+                    h3 Quarter Length
+                    h2.reviewTime {{ setting.gametime }}:00
+                .col
+                    h3(class='{{ setting.awayTeam.class }}') {{ setting.awayTeam.mascot }}
+                    .reviewImage.animated.infinite.pulse
+                        img(ng-src='img/teams/away/{{ setting.awayTeam.logo }}.png')
+        .row.bottom_row
+            .col.animated.bounceInRight
+                h3 Sounds
+                p.animated.infinite.pulse.balanced.reviewIcon(ng-if='setting.soundSettings == true')
+                    span.ion-volume-medium
+                p.animated.infinite.pulse.assertive.reviewIcon(ng-if='setting.soundSettings == false')
+                    span.ion-volume-mute
+            .col.animated.bounceInRight
+                h3 Questions
+                p.animated.infinite.pulse.assertive.reviewIcon(ng-if='setting.questionSettings == false')
+                    span.ion-close
+                p.animated.infinite.pulse.balanced.reviewIcon(ng-if='setting.questionSettings == true')
+                    span.ion-checkmark
+            .col.animated.rubberBand
+                button.button.button-energized(ui-sref='settings.homeTeam') &nbsp;&nbsp;Edit&nbsp;&nbsp;
+            .col.animated.rubberBand
+                button.button.button-balanced(ng-click='setting.saveSettings()') Start

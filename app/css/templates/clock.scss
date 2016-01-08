@@ -1,0 +1,26 @@
+@import "variables";
+
+.flip-clock-divider {
+  .flip-clock-label {
+    display: none;
+  }
+}
+
+h2.clock-face {
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+ul.flip {
+  float: left;
+
+  .down {
+    display: none;
+  }
+
+  li.flip-clock-before {
+    display: none;
+  }
+}

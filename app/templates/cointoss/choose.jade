@@ -1,0 +1,24 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInLeft
+            .page_title
+                h2(away-team-class)
+                    away-team-nickname
+                    br
+                    | Choose heads or tails!
+        .row
+            .col.animated.pulse.infinite(ng-click='toss.tossCoin("heads")')
+                .animated.rubberBand
+                    .coin
+                        home-team-image-regular
+            .col.animated.pulse.infinite(ng-click='toss.tossCoin("tails")')
+                .animated.rubberBand
+                    .coin
+                        away-team-image-regular
+        .row.animated.bounceInLeft
+            .col(ng-click='toss.tossCoin("heads")')
+                .page_title
+                    h2 heads
+            .col(ng-click='toss.tossCoin("tails")')
+                .page_title
+                    h2 tails

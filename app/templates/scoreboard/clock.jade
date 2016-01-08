@@ -1,0 +1,12 @@
+.clock_section
+    h2.clock-face
+    .clock_icons
+        .row
+            .col
+                adjust-settings-button
+            .col(ng-click='resumeGame()', ng-hide='gamePaused')
+                span.ion-play
+            .col(ng-click='pauseGame()', ng-show='gamePaused')
+                span.ion-pause
+            .col
+                sound-effects-button

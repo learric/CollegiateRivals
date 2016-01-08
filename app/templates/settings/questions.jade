@@ -1,0 +1,29 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInRight
+            .page_title
+                h2 Question Settings
+            .row
+                .col.col-50.col-offset-25
+                    .list
+                        label.item.item-toggle Questions on or off?
+                            .toggle.toggle-balanced
+                                input(type='checkbox', ng-model='setting.questionSettings')
+                                .track
+                                    .handle
+            .row(ng-if='setting.questionSettings')
+                .col.col-50.col-offset-25
+                    .list
+                        label.item.item-input.item-select
+                            .input-label Questions
+                            select
+                                option default
+                                option ms hough -- spanish
+                                option ms davis -- history
+                                option ms reid -- math
+        .row.bottom_row
+            .col.col-10.animated.rubberBand
+                button.button.button-energized(ui-sref='settings.clock')
+                    span.ion-arrow-left-a
+            .col.col-25.col-offset-67.animated.rubberBand
+                button.button.button-balanced(ui-sref='settings.sounds') next

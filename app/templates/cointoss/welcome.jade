@@ -1,0 +1,43 @@
+html
+    body
+        .main_bg
+
+            ion-view.animated.bounceInRight
+
+                .body_wrapper_container
+
+                    .row
+                        .col
+                            h2 Welcome to the Rivalry!
+
+                    .row
+                        .col.animated.infinite.pulse
+                            .matchupImage
+                                home-team-image-regular
+
+                        .col.col-bottom
+                            h2 vs
+
+                        .col.animated.infinite.pulse
+                            .matchupImage
+                                away-team-image-regular
+
+                    .row
+                        .col
+                            h3(home-team-class)
+                                home-team-nickname
+                                br
+                                home-team-mascot
+
+                        .col
+
+                        .col
+                            h3(away-team-class)
+                                away-team-nickname
+                                br
+                                away-team-mascot
+
+                    .row.bottom_row
+                        .col.col-50.col-offset-25
+                            button.button.button-block.button-balanced(ui-sref='cointoss.choose') Coin toss
+                                span.ion-arrow-right-a

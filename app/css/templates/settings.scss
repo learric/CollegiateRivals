@@ -1,0 +1,68 @@
+@import "variables";
+
+.team_selection_list {
+  li {
+    display: inline-block;
+  }
+  .selection {
+    padding: 4vmin;
+    .logo {
+      img {
+        height:15vmin;
+        width: auto;
+      }
+    }
+    h4 {
+      font-size: 3vmin;
+      padding:0;
+      margin: 0;
+    }
+  }
+}
+
+.time_selection_list {
+  width: 30%;
+  margin:1%;
+  display: inline-block;
+  padding: 3vmin 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 0 1px black;
+  -moz-box-shadow: 0 0 1px 1px black;
+  box-shadow: 0 0 1px 1px black;
+  h2 {
+    text-align: center;
+    font-size: 10vmin;
+    padding:0;
+    margin: 0;
+  }
+}
+
+.volume_icon, .question_icon {
+  text-align: center;
+  padding-top: 5vmin;
+
+  span {
+    font-size: 30vmin;
+  }
+}
+
+h2.reviewTime {
+  font-size: 12vmin;
+}
+
+.reviewImage {
+  img {
+    height:20vmin;
+    width: auto;
+  }
+}
+
+.reviewIcon {
+  span {
+    font-size: 8vmin;
+  }
+}
+
+.active_bg {
+  background-color: #bbb;
+}

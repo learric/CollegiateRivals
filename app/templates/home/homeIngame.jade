@@ -1,0 +1,12 @@
+.main_bg
+    .body_wrapper_container
+        .body_wrapper.animated.slideInDown
+            .home_logo.animated.infinite.pulse
+                img(src='img/logo.png')
+        .row.bottom_row
+            .col.animated.rubberBand
+                button.button.button-calm(ui-sref='plays.new') Menu
+            .col.animated.rubberBand
+                button.button.button-assertive(ui-sref='home') End Game
+            .col.animated.rubberBand
+                button.button.button-balanced(ui-sref='plays.new', ng-click='resumeGame()') Resume

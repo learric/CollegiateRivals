@@ -1,0 +1,7 @@
+.row
+    .col.animated.rubberBand
+        button.button.button-energized(ui-sref='scoreboard.fieldGoal') field goal
+    .col.animated.rubberBand
+        button.button.button-positive.play-touchdown-directive(ng-click='board.scoringPlay(6)') touchdown
+    .col.animated.rubberBand
+        button.button.button-assertive.icon_only_button(ng-click='board.cancelScoringPlay()') &nbsp;&nbsp;nope&nbsp;&nbsp;

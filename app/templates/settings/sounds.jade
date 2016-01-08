@@ -1,0 +1,22 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInLeft
+            .page_title
+                h2 Sound settings
+            .row
+                .col.col-50.col-offset-25
+                    .list
+                        label.item.item-toggle Sound Effects on or off?
+                            .toggle.toggle-balanced
+                                input(type='checkbox', ng-model='setting.soundSettings')
+                                .track
+                                    .handle
+            .volume_icon.animated.infinite.pulse
+                span.ion-volume-medium.balanced(ng-show='setting.soundSettings')
+                span.ion-volume-mute.assertive(ng-hide='setting.soundSettings')
+        .row.bottom_row
+            .col.col-10.animated.rubberBand
+                button.button.button-energized(ui-sref='settings.questions')
+                    span.ion-arrow-left-a
+            .col.col-25.col-offset-67.animated.rubberBand
+                button.button.button-balanced(ui-sref='settings.review') next

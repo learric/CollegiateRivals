@@ -1,0 +1,75 @@
+// *********
+// fonts
+// *********
+
+@import "templates/fonts";
+
+// *********
+// library imports
+// *********
+
+@import "ionic";
+@import "templates/teamColors";
+@import "templates/animation";
+
+// *********
+// variables & mixins
+// *********
+
+@import "templates/variables";
+
+// *********
+// style imports
+// *********
+
+@import "templates/global";
+
+// *********
+// global classes
+// *********
+
+@import "templates/classes";
+
+// *********
+// home specific
+// *********
+
+@import "templates/home";
+
+// *********
+// settings specific
+// *********
+
+@import "templates/settings";
+
+// *********
+// coin toss specific
+// *********
+
+@import "templates/toss";
+
+// *********
+// scoreboard specific
+// *********
+
+@import "templates/scoreboard";
+
+// *********
+// chalkboard specific
+// *********
+
+@import "templates/chalkboard";
+
+// *********
+// play specific
+// *********
+
+@import "templates/plays";
+
+// *********
+// clock face
+// *********
+
+@import "templates/clock";
+
+//

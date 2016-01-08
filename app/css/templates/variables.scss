@@ -1,0 +1,25 @@
+$oswald: "Oswald";
+$osbold: "OsBold";
+$eraser: "Eraser";
+
+@mixin regFont {
+  font-family: $oswald;
+  text-transform: uppercase;
+}
+
+@mixin boldFont {
+  font-family: $osbold;
+  text-transform: uppercase;
+}
+
+@mixin chalkFont {
+  font-family: $eraser;
+}
+
+@mixin animation_delay($time) {
+  animation-delay: $time;
+}
+
+@mixin animationDuration($time) {
+  animation-duration: $time;
+}

@@ -1,0 +1,12 @@
+/platforms/^.*
+/keys
+
+/node_modules
+/assets/components
+
+/www
+
+/.envrc
+/npm-debug.log
+
+/.idea

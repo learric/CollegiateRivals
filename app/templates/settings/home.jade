@@ -1,0 +1,10 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInLeft
+            .page_title
+                h2 choose home team
+            ul.team_selection_list
+                li(ng-repeat='team in setting.teams', ng-click='setting.saveHome($index)')
+                    .selection
+                        .logo.animated.infinite.pulse
+                            img(ng-src='img/teams/home/{{ team.logo }}.png')

@@ -1,0 +1,16 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInRight
+            .page_title
+                h2(away-team-class)
+                    away-team-nickname
+                    | &nbsp;chooses {{ toss.tossChoice }}
+        .row
+            .col
+                .animated.infinite.pulse(ui-sref='cointoss.result')
+                    .coin.larger_coin
+                        home-team-image-regular(ng-hide='toss.showAwayToken')
+                        away-team-image-regular(ng-show='toss.showAwayToken')
+        .row.bottom_row
+            .col.col-25.col-offset-75
+                button.button.button-balanced(ui-sref='cointoss.result') Flip coin

@@ -1,0 +1,14 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInRight
+            .page_title
+                h2 choose away team
+            ul.team_selection_list
+                li(ng-repeat='team in setting.teams', ng-click='setting.saveAway($index)')
+                    .selection
+                        .logo.animated.infinite.pulse
+                            img(ng-src='img/teams/away/{{ team.logo }}.png')
+        .row.bottom_row
+            .col.col-10.animated.rubberBand
+                button.button.button-energized(ui-sref='settings.homeTeam')
+                    span.ion-arrow-left-a

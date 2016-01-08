@@ -1,0 +1,74 @@
+@import "variables";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+h1, h2, h3, h4, p, input {
+  font-family: $oswald;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 7vmin;
+}
+
+h3 {
+  font-size: 5vmin;
+}
+
+h4 {
+  font-size: 4vmin;
+}
+
+p {
+  font-size: 3vmin;
+}
+
+select, label {
+  font-family:$oswald;
+  text-transform: uppercase;
+}
+
+label.item-toggle, label.item-select {
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button, button.button, button.button-block {
+  font-family: $oswald;
+  text-transform: uppercase;
+  font-size: 7vmin;
+  padding-top: 3vmin;
+  padding-bottom: 3vmin;
+  text-align: left;
+  height: auto;
+  line-height: normal;
+
+  span {
+    display: block;
+    padding: 0 2vmin;
+  }
+}
+
+button.icon_only_button {
+  text-align: center;
+
+  span {
+    position: relative;
+    right: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}

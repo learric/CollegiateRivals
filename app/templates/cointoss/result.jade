@@ -1,0 +1,29 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInRight
+            .row
+                .col
+                    h2 The toss is {{ toss.result }}!
+                    h3(ng-hide='toss.winnerAway', home-team-class)
+                        home-team-nickname
+                        |  wins the toss!
+                    h3(ng-show='toss.winnerAway', away-team-class)
+                        away-team-nickname
+                        |  wins the toss!
+            .row
+                .col.col-50.col-offset-25
+                    .coin_flip_container.animated.slideInDown(hide-after-coin-flip)
+                        #coin(add-flip-coin-class)
+                            section.front
+                                .coin.larger_coin
+                                    home-team-image-regular
+                            section.back
+                                .coin.larger_coin
+                                    away-team-image-regular
+                    section(ui-sref='scoreboard.openingKickoff')
+                        .coin.larger_coin.animated.infinite.pulse(show-after-coin-flip)
+                            home-team-image-regular(ng-hide='toss.showAwayLogo')
+                            away-team-image-regular(ng-show='toss.showAwayLogo')
+        .row.bottom_row
+            .col.col-25.col-offset-75
+                button.button.button-balanced(ui-sref='scoreboard.openingKickoff') Kickoff

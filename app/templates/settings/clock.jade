@@ -1,0 +1,11 @@
+.main_bg
+    .body_wrapper_container
+        .animated.bounceInLeft
+            .page_title
+                h2 choose game time
+            section.time_selection_list(ng-repeat='time in setting.gameTimes', ng-click='setting.saveGameTime(time)')
+                h2 {{ time }}:00
+        .row.bottom_row
+            .col.col-10.animated.rubberBand
+                button.button.button-energized(ui-sref='settings.awayTeam')
+                    span.ion-arrow-left-a
