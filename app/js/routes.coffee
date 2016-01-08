@@ -16,6 +16,7 @@ angular.module('ionicstarter')
   .state 'home',
     url: '/home'
     templateUrl: 'templates/home/home.html'
+    controller: 'SessionController as session'
 
   .state 'homeIngame',
     url: '/homeIngame'

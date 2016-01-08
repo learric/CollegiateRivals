@@ -7,9 +7,6 @@ angular.module("ionicstarter")
   if !$scope.isSessionActive
     $state.go('home')
 
-  $scope.activeSession = ->
-    $scope.isSessionActive = true
-
   $scope.pauseGame = ->
     $scope.gamePaused = false
     ClockFactory.pauseClock()

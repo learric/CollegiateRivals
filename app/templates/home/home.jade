@@ -10,14 +10,16 @@
                     .col.col-50
                         .list.list-inset
                             label.item.item-input
-                                input(type="text", placeholder="Email")
+                                input(type="text", placeholder="Email", ng-model="session.email")
+
                     .col.col-50
                         .list.list-inset
                             label.item.item-input
-                                input(type="text", placeholder="Password")
+                                input(type="text", placeholder="Password", ng-model="session.token")
+
                 .row.bottom_row
                     .col.col-25.col-offset-75.animated.rubberBand
-                        button.button.button-balanced(ng-click='activeSession()') Login
+                        button.button.button-balanced(ng-click='session.createSession()') Login
 
         section(ng-if="isSessionActive")
             .row.bottom_row
