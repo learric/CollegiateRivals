@@ -1,7 +1,15 @@
 angular.module("ionicstarter")
 
-.factory "SessionFactory", ->
+.factory "SessionFactory", ($http) ->
 
   return {
-    session: true
+    createSession: (email, password)->
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3000/users/sign_in'
+        params: {
+          email: email,
+          password: password
+        }
+      })
   }

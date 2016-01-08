@@ -1,10 +1,10 @@
 angular.module("ionicstarter")
 
-.controller "SessionController", (SessionFactory) ->
+.controller "SessionController", (SessionFactory, $http) ->
 
   session = this
 
   session.createSession = ->
-    console.log 'create'
+    SessionFactory.createSession(session.email, session.token)
 
   return session
