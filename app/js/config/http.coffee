@@ -11,6 +11,7 @@ app.config ($httpProvider) ->
 
   # Send API version code in header (might be useful in future)
   $httpProvider.defaults.headers.common["X-Api-Version"] = "1.0"
+  $httpProvider.defaults.headers.common['Access-Control-Allow-Headers'] = '*'
 
   $httpProvider.interceptors.push ($injector, $q, $log, $location) ->
     responseError: (response) ->

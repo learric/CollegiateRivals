@@ -5,11 +5,9 @@ angular.module("ionicstarter")
   return {
     createSession: (email, password)->
       $http({
-        method: 'POST',
-        url: 'http://localhost:3000/users/sign_in',
-        params: {
-          email: email,
-          password: password
-        }
-      })
+        method: 'GET',
+        url: 'http://localhost:3000/games/questions.json'
+      }).then((res) ->
+        console.log res
+      )
   }
