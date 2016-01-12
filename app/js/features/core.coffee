@@ -20,3 +20,9 @@ angular.module("ionicstarter")
 
   $scope.playAwaySong = ->
     SoundFactory.playAwayFightSong()
+
+  $scope.playCrowd = ->
+    SoundFactory.playCrowd()
+
+  $scope.playCheer = ->
+    SoundFactory.playCheer()

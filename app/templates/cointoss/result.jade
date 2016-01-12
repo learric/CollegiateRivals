@@ -20,10 +20,10 @@
                             section.back
                                 .coin.larger_coin
                                     away-team-image-regular
-                    section(ui-sref='scoreboard.openingKickoff')
+                    section
                         .coin.larger_coin.animated.infinite.pulse(show-after-coin-flip)
                             home-team-image-regular(ng-hide='toss.showAwayLogo')
                             away-team-image-regular(ng-show='toss.showAwayLogo')
         .row.bottom_row
             .col.col-25.col-offset-75
-                button.button.button-balanced(ui-sref='scoreboard.openingKickoff') Kickoff
+                button.button.button-balanced(ng-click="toss.cointossKickoff()") Kickoff

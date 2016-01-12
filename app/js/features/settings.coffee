@@ -62,7 +62,7 @@ angular.module("ionicstarter")
     ClockFactory.setGameClock(setting.gametime)
     SettingsFactory.saveSoundSettings(setting.soundSettings)
     SettingsFactory.saveQuestionSettings(setting.questionSettings)
-    $scope.playHomeSong()
+    $scope.playCrowd()
 
     $state.go('cointoss.choose')
 
