@@ -2,7 +2,7 @@ angular.module("ionicstarter")
 
 .controller "CoreController", (QuestionFactory, ClockFactory, SoundFactory, $scope, $state) ->
 
-  $scope.isSessionActive = false
+  $scope.isSessionActive = true
 
   if !$scope.isSessionActive
     $state.go('home')
