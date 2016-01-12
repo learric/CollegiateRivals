@@ -26,3 +26,8 @@ angular.module("ionicstarter")
 
   $scope.playCheer = ->
     SoundFactory.playCheer()
+
+  $scope.incorrectBuzzer = ->
+    SoundFactory.playIncorrectBuzzer()
+
+  $scope.incorrectBuzzer()

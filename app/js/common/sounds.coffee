@@ -43,6 +43,16 @@ angular.module("ionicstarter")
     preload: true
   })
 
+  correctBell = new buzz.sound(soundLoc + 'correct_bell', {
+    formats: ['ogg', 'mp3']
+    preload: true
+  })
+
+  incorrectBuzzer = new buzz.sound(soundLoc + 'incorrect_buzzer', {
+    formats: ['ogg', 'mp3']
+    preload: true
+  })
+
   soundStatus = ->
     return SettingsFactory.getSoundSettings()
 
@@ -85,4 +95,14 @@ angular.module("ionicstarter")
       sounds = soundStatus()
       if sounds == true
         roar.play().fadeOut()
+
+    playCorrectBell: ->
+      sounds = soundStatus()
+      if sounds == true
+        correctBell.play()
+
+    playIncorrectBuzzer: ->
+      sounds = soundStatus()
+      if sounds == true
+        incorrectBuzzer.play()
   }

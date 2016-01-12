@@ -4,7 +4,9 @@
         h2 Incorrect!
     .chalkboard_content
         .question_container
-            h3 Time to hit the books?
+            h3 the correct answer is
+            h3 {{ question.correctAnswer.answers[3] }}
+            span.ion-close-circled.assertive.wrong_answer_x
     .chalkboard_buttons
         .row
             .col.col-25.col-offset-75.animated.rubberBand
