@@ -1,6 +1,6 @@
 angular.module("ionicstarter")
 
-.controller "CoreController", (QuestionFactory, ClockFactory, SoundFactory, $scope, $state) ->
+.controller "CoreController", (QuestionFactory, ClockFactory, SoundFactory, TeamFactory, QuarterTracker, $scope, $state) ->
 
   $scope.isSessionActive = true
 
@@ -32,3 +32,7 @@ angular.module("ionicstarter")
 
   $scope.correctBell = ->
     SoundFactory.playCorrectBell()
+
+  $scope.resetGame = ->
+    TeamFactory.resetScores()
+    QuarterTracker.resetQuarter()

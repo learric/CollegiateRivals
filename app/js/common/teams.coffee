@@ -178,4 +178,8 @@ angular.module("ionicstarter")
 
     updateAwayScore: (points) ->
       awayScore += points
+
+    resetScores: ->
+      homeScore = 0
+      awayScore = 0
   }

@@ -13,4 +13,7 @@ angular.module("ionicstarter")
         quarter += 1
       else
         quarter = 1
+
+    resetQuarter: ->
+      quarter = 1
   }
