@@ -51,3 +51,22 @@
     }
   }
 }
+
+.chalkboard_below_content {
+  width:100%;
+  height:100%;
+  position: absolute;
+  z-index: 4000;
+
+  img {
+    display: block;
+    height:100%;
+    width:auto;
+    margin: 0 auto;
+  }
+}
+
+.content_above_chalkboard {
+  z-index: 5000;
+  position: relative;
+}

@@ -6,5 +6,7 @@
             advert-you-tube-video
         .row.bottom_row
             .col.col-25.col-offset-75.animated.rubberBand
-                button.button.button-balanced(ng-click='interlude.updateQuarter()', ng-hide='interlude.endGame') Next
-                button.button.button-balanced(ui-sref='home', ng-show='interlude.endGame') New Game
+                span.advert-button-delay-text You can skip this video in 15 seconds
+                div.advert-button-delay
+                    button.button.button-balanced(ng-click='interlude.updateQuarter()', ng-hide='interlude.endGame') Next
+                    button.button.button-balanced(ui-sref='home', ng-show='interlude.endGame') New Game
