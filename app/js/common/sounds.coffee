@@ -58,6 +58,7 @@ angular.module("ionicstarter")
 
   return {
     playHomeFightSong: ->
+      buzz.all().stop()
       sounds = soundStatus()
       team = TeamFactory.getHomeTeam()
 
@@ -65,6 +66,7 @@ angular.module("ionicstarter")
         homeFightSong(team).play().fadeOut(15000)
 
     playAwayFightSong: ->
+      buzz.all().stop()
       sounds = soundStatus()
       team = TeamFactory.getAwayTeam()
 
@@ -72,36 +74,43 @@ angular.module("ionicstarter")
         awayFightSong(team).play().fadeOut(15000)
 
     playTouchdown: ->
+      buzz.all().stop()
       sounds = soundStatus()
       if sounds == true
         touchdown.play()
 
     playWhistle: ->
+      buzz.all().stop()
       sounds = soundStatus()
       if sounds == true
         whistle.play()
 
     playCrowd: ->
+      buzz.all().stop()
       sounds = soundStatus()
       if sounds == true
         crowd.play().fadeOut()
 
     playCheer: ->
+      buzz.all().stop()
       sounds = soundStatus()
       if sounds == true
         cheer.play().fadeOut()
 
     playRoar: ->
+      buzz.all().stop()
       sounds = soundStatus()
       if sounds == true
         roar.play().fadeOut()
 
     playCorrectBell: ->
+      buzz.all().stop()
       sounds = soundStatus()
       if sounds == true
         correctBell.play()
 
     playIncorrectBuzzer: ->
+      buzz.all().stop()
       sounds = soundStatus()
       if sounds == true
         incorrectBuzzer.play()

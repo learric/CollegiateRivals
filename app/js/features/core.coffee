@@ -30,4 +30,5 @@ angular.module("ionicstarter")
   $scope.incorrectBuzzer = ->
     SoundFactory.playIncorrectBuzzer()
 
-  $scope.incorrectBuzzer()
+  $scope.correctBell = ->
+    SoundFactory.playCorrectBell()

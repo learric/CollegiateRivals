@@ -1,10 +1,14 @@
 .chalkboard_bg
     .chalkboard_header
-        //active-team-headline
-        h2 Correct!
+        active-team-headline
+        h3 That's Correct!
     .chalkboard_content
         .question_container
-            h3 Run the next play!
+            .animated.infinite.pulse
+                span.ion-checkmark-circled.balanced.wrong_answer_x
+            h2.animated.tada.infinite.active-team-class
+                active-team-slogan
+                | !
     .chalkboard_buttons
         .row
             .col.col-25.col-offset-75.animated.rubberBand

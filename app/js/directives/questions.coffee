@@ -6,7 +6,11 @@ angular.module("ionicstarter")
     restrict: 'EAC'
     link: (sc, el) ->
       question = QuestionFactory.getCurrentQuestion()
-      el.text(question.category + ' Question')
+
+      if question.category == ''
+        el.text('General Question')
+      else
+        el.text(question.category + ' Question')
   }
 
 .directive "questionFirstLine", (QuestionFactory) ->
@@ -39,8 +43,10 @@ angular.module("ionicstarter")
       el.addClass('first')
       el.on('click', ->
         if answer == correct.answers[3]
+          sc.correctBell()
           $state.go('correctAnswer')
         else
+          sc.incorrectBuzzer()
           $state.go('incorrectAnswer')
       )
   }
@@ -57,8 +63,10 @@ angular.module("ionicstarter")
       el.addClass('second')
       el.on('click', ->
         if answer == correct.answers[3]
+          sc.correctBell()
           $state.go('correctAnswer')
         else
+          sc.incorrectBuzzer()
           $state.go('incorrectAnswer')
       )
   }
@@ -75,8 +83,10 @@ angular.module("ionicstarter")
       el.addClass('third')
       el.on('click', ->
         if answer == correct.answers[3]
+          sc.correctBell()
           $state.go('correctAnswer')
         else
+          sc.incorrectBuzzer()
           $state.go('incorrectAnswer')
       )
   }
@@ -93,8 +103,10 @@ angular.module("ionicstarter")
       el.addClass('last')
       el.on('click', ->
         if answer == correct.answers[3]
+          sc.correctBell()
           $state.go('correctAnswer')
         else
+          sc.incorrectBuzzer()
           $state.go('incorrectAnswer')
       )
   }

@@ -52,7 +52,6 @@ angular.module("ionicstarter")
     $state.go('cointoss.flip')
 
   toss.cointossKickoff = ->
-    $scope.playCrowd()
     $state.go('scoreboard.openingKickoff')
 
   return toss

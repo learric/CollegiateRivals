@@ -24,6 +24,7 @@ angular.module("ionicstarter")
   board.scoringKickoff = ->
     board.toggleActive()
     $scope.resumeGame()
+    buzz.all().stop()
     $state.go('plays.new')
 
   # *********

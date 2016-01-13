@@ -1,12 +1,15 @@
 .chalkboard_bg
     .chalkboard_header
-        //active-team-headline
-        h2 Incorrect!
+        active-team-headline
+        h3 Incorrect!
     .chalkboard_content
         .question_container
+            .animated.infinite.pulse
+                span.ion-close-circled.assertive.wrong_answer_x
             h3 the correct answer is
             h3 {{ question.correctAnswer.answers[3] }}
-            span.ion-close-circled.assertive.wrong_answer_x
+
+
     .chalkboard_buttons
         .row
             .col.col-25.col-offset-75.animated.rubberBand

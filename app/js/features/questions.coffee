@@ -13,6 +13,8 @@ angular.module("ionicstarter")
 
   question.loadNewPlay = ->
     GameplayFactory.loadNewPlay()
+    buzz.all().stop()
+    $scope.playCrowd()
     $state.go('plays.play')
 
   question.incorrectAnswer = ->
