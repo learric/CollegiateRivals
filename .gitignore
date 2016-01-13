@@ -5,6 +5,7 @@
 /assets/components
 
 /www
+*.zip
 
 /.envrc
 /npm-debug.log
