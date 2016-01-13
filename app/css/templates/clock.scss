@@ -24,3 +24,23 @@ ul.flip {
     display: none;
   }
 }
+.current-quarter-marker {
+  position: absolute;
+  top:0;
+  right:0;
+  width:20%;
+  padding-top: 1vmin;
+
+  span {
+    color: white;
+    display: block;
+    text-align: center;
+    font-family: $oswald;
+    font-size: 3vmin;
+    line-height: 150%;
+  }
+
+  span + span {
+    font-size: 4vmin;
+  }
+}

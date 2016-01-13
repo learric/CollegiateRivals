@@ -3,7 +3,6 @@ angular.module("ionicstarter")
 .factory "ClockFactory", ($state, $timeout) ->
 
   setGameTime = 300
-  setGameQuarter = 0
 
   newClock = new FlipClock(newClock, {
     countdown: true
@@ -22,7 +21,6 @@ angular.module("ionicstarter")
     setGameClock: (time) ->
       setGameTime = time * 60
       newClock.setTime(setGameTime)
-      setGameQuarter += 1
 
     pauseClock: ->
       newClock.stop()
@@ -32,7 +30,4 @@ angular.module("ionicstarter")
 
     getClock: ->
       return newClock
-
-    getQuarter: ->
-      return setGameQuarter
   }

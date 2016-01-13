@@ -4,8 +4,7 @@
         h3 {{ interlude.commentary }} {{ interlude.homeScore }} - {{ interlude.awayScore }}
         .gameboard_content.video_player_container
             advert-you-tube-video
-        .gameboard_buttons
-            .row
-                .col.col-25.col-offset-75.animated.rubberBand
-                    button.button.button-balanced(ui-sref='plays.new', ng-hide='interlude.endGame') Next
-                    button.button.button-balanced(ui-sref='home', ng-show='interlude.endGame') New Game
+        .row.bottom_row
+            .col.col-25.col-offset-75.animated.rubberBand
+                button.button.button-balanced(ng-click='interlude.updateQuarter()', ng-hide='interlude.endGame') Next
+                button.button.button-balanced(ui-sref='home', ng-show='interlude.endGame') New Game

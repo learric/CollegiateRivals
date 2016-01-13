@@ -1,8 +1,6 @@
 angular.module("ionicstarter")
 
-.controller "InterludeController", (SettingsFactory, ClockFactory, AdvertFactory, TeamFactory, $scope, $state, $log) ->
-
-  $log.log 'activate interlude controller'
+.controller "InterludeController", (SettingsFactory, ClockFactory, AdvertFactory, TeamFactory, QuarterTracker, $scope, $state) ->
 
   # *********
   # rename this for clarity between controllers
@@ -11,7 +9,7 @@ angular.module("ionicstarter")
   interlude = this
 
   gameTime = SettingsFactory.getGameTime()
-  gameQuarter = ClockFactory.getQuarter()
+  gameQuarter = QuarterTracker.getQuarter()
 
   interlude.homeScore = TeamFactory.getHomePoints()
   interlude.awayScore = TeamFactory.getAwayPoints()
@@ -53,12 +51,16 @@ angular.module("ionicstarter")
       interlude.commentary = 'the game ends in a tie'
 
   switch gameQuarter
-    when 0 then interlude.firstQuarter()
-    when 1 then interlude.secondQuarter()
-    when 2 then interlude.thirdQuarter()
-    when 3 then interlude.fourthQuarter()
+    when 1 then interlude.firstQuarter()
+    when 2 then interlude.secondQuarter()
+    when 3 then interlude.thirdQuarter()
+    when 4 then interlude.fourthQuarter()
 
   ClockFactory.setGameClock(gameTime)
   $scope.pauseGame()
+
+  interlude.updateQuarter = ->
+    QuarterTracker.updateQuarter()
+    $state.go('plays.new')
 
   return interlude

@@ -69,3 +69,12 @@ angular.module("ionicstarter")
       if getCurrent.time == 0
         $state.go('interlude')
   }
+
+.directive "currentQuarter", (QuarterTracker) ->
+
+  return {
+    restrict: 'EAC'
+    link: (sc, el) ->
+      quarter = QuarterTracker.getQuarter()
+      el.text(quarter)
+  }
