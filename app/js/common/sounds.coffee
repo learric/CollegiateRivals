@@ -63,7 +63,7 @@ angular.module("ionicstarter")
       team = TeamFactory.getHomeTeam()
 
       if (sounds == true)
-        homeFightSong(team).play().fadeOut(15000)
+        homeFightSong(team).play().fadeOut(25000)
 
     playAwayFightSong: ->
       buzz.all().stop()
@@ -71,7 +71,7 @@ angular.module("ionicstarter")
       team = TeamFactory.getAwayTeam()
 
       if sounds == true
-        awayFightSong(team).play().fadeOut(15000)
+        awayFightSong(team).play().fadeOut(25000)
 
     playTouchdown: ->
       buzz.all().stop()
