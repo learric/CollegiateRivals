@@ -66,7 +66,7 @@ angular.module("ionicstarter")
     else
       kick = Math.floor(Math.random() * 101)
 
-      if kick <= 90
+      if kick <= 60
         board.scoringPlay(2)
         board.noGood = ''
       else
