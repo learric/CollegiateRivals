@@ -8,7 +8,7 @@ angular.module("ionicstarter")
       play = GameplayFactory.getNewPlay()
       action = play.action
       result = play.result
-      el.html('<h3>' + result + '</h3><h4>' + action + '</h4>')
+      el.html('<h3 class="animated infinite tada">' + result + '</h3><h4>' + action + '</h4>')
   }
 
 .directive "playImage", (GameplayFactory) ->
